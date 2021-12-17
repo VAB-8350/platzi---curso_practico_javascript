@@ -31,6 +31,10 @@ function areaCirculo(radio) {
     return (radio * radio) * Math.PI;
 };
 
+function alturaTriangulo(lados, base){
+    return Math.sqrt((lados**2) - ((base**2)/4));
+}
+
 // aqui interactuamos con html
 function calcularPerimetroCuadrado() {
     const value = document.getElementById('inputCuadrado').value;
