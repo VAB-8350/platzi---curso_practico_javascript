@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto</title>
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --delete: #eba7ac;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        h2{
+            margin: 20px 0;
+            text-align: center;
+        }
+        body{
+            display: grid;
+            place-items: center;
+            width: 100%;
+            margin: 0;
+            height: 100vh;
+            font-family: 'Quicksand', sans-serif;
+        }
+        form{
+            display: flex;
+            gap: 30px;
+        }
+        form div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 30px;
+            width: 100%;
+            height: 200px;
+        }
+        form div input{
+            font-size: var(--md);
+            border: none;
+            border-bottom: 2px solid #ACD9B2;
+        }
+        section{
+            border: 1px solid var(--very-light-pink);
+            width: 75%;
+            height:350px;
+            padding: 0 20px;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+        button{
+            background: #ACD9B2;
+            border: 0;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        .button_egreso{
+            background-color: var(--delete);
+        }
+        .input_egreso{
+            border-bottom: 2px solid var(--delete);
+        }
+        .total{
+            display: flex;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <h2>Gestionar fondo</h2>
+        <form action="">
+            <div>
+                <label for="ingreso">Monto de ingreso:</label>
+                <input type="number" id="ingreso" placeholder="500">
+                <button type="button" onclick="addIngreso()">Cargar ingreso</button>
+            </div>
+
+            <div>
+                <label for="egreso">Monto de egreso:</label>
+                <input class="input_egreso" type="number" id="egreso" placeholder="500">
+                <button type="button" onclick="addEgreso()" class="button_egreso">Cargar egreso</button>
+            </div>
+            
+        </form>
+        <div class="total">
+            <p>Total ahorrado:</p>
+            <p id="monto"></p>
+        </div>
+        
+    </section>
+
+    <script src="reto.js"></script>
+</body>
+</html>
